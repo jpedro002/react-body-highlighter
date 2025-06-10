@@ -29,7 +29,7 @@
   "peerDependencies": {
     "react": ">=18"
   },
-  "name": "react-body-highlighter",
+  "name": "@jpedro002/react-body-highlighter",
   "author": "GV79",
   "description": "React.js component for highlighting muscles on a body model",
   "repository": {
