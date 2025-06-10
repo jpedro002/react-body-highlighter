@@ -1,4 +1,4 @@
-import { Muscle, MuscleType } from '../component/metadata';
+import { type Muscle, MuscleType } from '../component/metadata';
 interface ISVGModelData {
   muscle: Muscle;
   svgPoints: string[];
@@ -114,6 +114,42 @@ export const anteriorData: ISVGModelData[] = [
       '77.5510204 72.244898 77.5510204 77.5510204 80.4081633 84.0816327 85.3061224 89.7959184 92.244898 101.22449 94.6938776 99.5918367',
       '6.93877551 101.22449 13.4693878 90.6122449 18.7755102 84.0816327 21.6326531 77.1428571 21.2244898 71.8367347 4.89795918 98.7755102',
     ],
+  },
+
+  // Mãos removidas em favor dos tipos unilaterais
+
+  {
+    muscle: MuscleType.LEFT_HAND,
+    svgPoints: ['0 95 4 93 8 94 12 96 14 98 15 100 14 103 12 105 8 106 4 105 0 103 -2 100'],
+  },
+
+  {
+    muscle: MuscleType.RIGHT_HAND,
+    svgPoints: ['85 95 89 93 93 94 97 96 99 98 100 100 99 103 97 105 93 106 89 105 85 103 83 100'],
+  },
+
+  // Pés removidos em favor dos tipos unilaterais
+
+  {
+    muscle: MuscleType.LEFT_FOOT,
+    svgPoints: ['20 188 24 187 28 188 32 190 35 193 36 196 35 200 32 203 28 205 24 204 20 202 18 198 17 194 18 190'],
+  },
+
+  {
+    muscle: MuscleType.RIGHT_FOOT,
+    svgPoints: ['64 188 68 187 72 188 76 190 79 193 80 196 79 200 76 203 72 205 68 204 64 202 62 198 61 194 62 190'],
+  },
+
+  // Orelhas removidas em favor dos tipos unilaterais
+
+  {
+    muscle: MuscleType.LEFT_EAR,
+    svgPoints: ['34 12 36 10 38 11 39 14 40 17 39 20 37 22 35 21 34 19 33 16 34 12'],
+  },
+
+  {
+    muscle: MuscleType.RIGHT_EAR,
+    svgPoints: ['60 12 62 10 64 11 65 14 66 17 65 20 63 22 61 21 60 19 59 16 60 12'],
   },
 ];
 
@@ -232,5 +268,35 @@ export const posteriorData: ISVGModelData[] = [
     svgPoints: [
       '69.787234 195.744681 71.9148936 195.744681 73.6170213 198.297872 71.9148936 213.191489 70.212766 219.574468 67.2340426 202.12766',
     ],
+  },
+
+  {
+    muscle: MuscleType.LEFT_HAND,
+    svgPoints: ['0 105 4 103 8 104 12 106 14 108 15 110 14 113 12 115 8 116 4 115 0 113 -2 110'],
+  },
+
+  {
+    muscle: MuscleType.RIGHT_HAND,
+    svgPoints: ['85 100 89 98 93 99 97 101 99 103 100 105 99 108 97 110 93 111 89 110 85 108 83 105'],
+  },
+
+  {
+    muscle: MuscleType.LEFT_FOOT,
+    svgPoints: ['25 185 29 184 33 185 37 187 40 190 41 193 40 197 37 200 33 202 29 201 25 199 23 195 22 191 23 187'],
+  },
+
+  {
+    muscle: MuscleType.RIGHT_FOOT,
+    svgPoints: ['65 185 69 184 73 185 77 187 80 190 81 193 80 197 77 200 73 202 69 201 65 199 63 195 62 191 63 187'],
+  },
+
+  {
+    muscle: MuscleType.LEFT_EAR,
+    svgPoints: ['33 12 35 10 37 11 38 14 39 17 38 20 36 22 34 21 33 19 32 16 33 12'],
+  },
+
+  {
+    muscle: MuscleType.RIGHT_EAR,
+    svgPoints: ['61 12 63 10 65 11 66 14 67 17 66 20 64 22 62 21 61 19 60 16 61 12'],
   },
 ];

@@ -1,7 +1,7 @@
 //@ts-nocheck (sometimes giving partial input object for easier testing)
 
+import { type IMuscleData, type Muscle, MuscleType } from '../src/component/metadata';
 import { ensure, fillIntensityColor, fillMuscleData } from '../src/utils';
-import { IMuscleData, Muscle, MuscleType } from '../src/component/metadata';
 
 describe('ensure', () => {
   it('returns backup value if main value is null', () => {
@@ -106,6 +106,6 @@ describe('fillMuscleData', () => {
     expect(muscleObject[MuscleType.TRICEPS]).toStrictEqual(EXPECTED_OUTPUT[MuscleType.TRICEPS]);
     expect(muscleObject[MuscleType.BICEPS]).toStrictEqual(EXPECTED_OUTPUT[MuscleType.BICEPS]);
 
-    expect(muscleObject[MuscleType.FOREARM]).toBeDefined(); // initializes other muscles to default values
+    expect(muscleObject[MuscleType.FOREARM]).toBeDefined();
   });
 });

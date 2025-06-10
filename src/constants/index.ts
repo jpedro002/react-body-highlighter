@@ -1,4 +1,4 @@
-import { ModelType, Muscle, IMuscleData } from '../component/metadata';
+import { type IMuscleData, ModelType, type Muscle } from '../component/metadata';
 
 export const DEFAULT_MUSCLE_DATA: Record<Muscle, IMuscleData> = {
   trapezius: { exercises: [], frequency: 0 },
@@ -23,6 +23,12 @@ export const DEFAULT_MUSCLE_DATA: Record<Muscle, IMuscleData> = {
   knees: { exercises: [], frequency: 0 },
   'left-soleus': { exercises: [], frequency: 0 },
   'right-soleus': { exercises: [], frequency: 0 },
+  'left-hand': { exercises: [], frequency: 0 },
+  'right-hand': { exercises: [], frequency: 0 },
+  'left-foot': { exercises: [], frequency: 0 },
+  'right-foot': { exercises: [], frequency: 0 },
+  'left-ear': { exercises: [], frequency: 0 },
+  'right-ear': { exercises: [], frequency: 0 },
 };
 
 export const DEFAULT_BODY_COLOR = '#B6BDC3';

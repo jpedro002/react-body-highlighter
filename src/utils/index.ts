@@ -1,4 +1,4 @@
-import { IExerciseData, IMuscleData, Muscle } from '../component/metadata';
+import type { IExerciseData, IMuscleData, Muscle } from '../component/metadata';
 import { DEFAULT_MUSCLE_DATA } from '../constants';
 
 /*
@@ -29,12 +29,15 @@ export const fillIntensityColor = (
  * Function which generates object with muscle data
  */
 export const fillMuscleData = (data: IExerciseData[]): Record<Muscle, IMuscleData> => {
-  return data.reduce((acc, exercise: IExerciseData) => {
-    for (const muscle of exercise.muscles) {
-      acc[muscle].exercises = [...acc[muscle].exercises, exercise.name];
-      acc[muscle].frequency += exercise.frequency || 1;
-    }
+  return data.reduce(
+    (acc, exercise: IExerciseData) => {
+      for (const muscle of exercise.muscles) {
+        acc[muscle].exercises = [...acc[muscle].exercises, exercise.name];
+        acc[muscle].frequency += exercise.frequency || 1;
+      }
 
-    return acc;
-  }, JSON.parse(JSON.stringify(DEFAULT_MUSCLE_DATA)));
+      return acc;
+    },
+    JSON.parse(JSON.stringify(DEFAULT_MUSCLE_DATA))
+  );
 };

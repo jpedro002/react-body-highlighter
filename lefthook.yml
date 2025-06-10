@@ -1,0 +1,26 @@
+pre-commit:
+  parallel: true
+  commands:
+    lint-staged:
+      run: |
+        FILES=$(git diff --name-only --cached --relative --diff-filter=d | grep -E '\.(js|jsx|ts|tsx)$')
+        if [ -z "$FILES" ]; then
+          echo "✅ No TypeScript/JavaScript files to lint"
+          exit 0
+        fi
+        echo "🔍 Running lint on staged files:"
+        echo "$FILES" | xargs pnpm exec biome check
+      glob: "*.{js,jsx,ts,tsx}"
+      stage_fixed: true
+
+    format-staged:
+      run: |
+        FILES=$(git diff --name-only --cached --relative --diff-filter=d | grep -E '\.(js|jsx|ts|tsx)$')
+        if [ -z "$FILES" ]; then
+          echo "✅ No TypeScript/JavaScript files to format"
+          exit 0
+        fi
+        echo "🎨 Formatting staged files:"
+        echo "$FILES" | xargs pnpm exec biome format --write
+      glob: "*.{js,jsx,ts,tsx}"
+      stage_fixed: true

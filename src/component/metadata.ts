@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react';
+import type { CSSProperties } from 'react';
 
 export const MuscleType = {
   TRAPEZIUS: 'trapezius',
@@ -23,16 +23,22 @@ export const MuscleType = {
   KNEES: 'knees',
   LEFT_SOLEUS: 'left-soleus',
   RIGHT_SOLEUS: 'right-soleus',
+  LEFT_HAND: 'left-hand',
+  RIGHT_HAND: 'right-hand',
+  LEFT_FOOT: 'left-foot',
+  RIGHT_FOOT: 'right-foot',
+  LEFT_EAR: 'left-ear',
+  RIGHT_EAR: 'right-ear',
 } as const;
 
-export type Muscle = typeof MuscleType[keyof typeof MuscleType];
+export type Muscle = (typeof MuscleType)[keyof typeof MuscleType];
 
 export const ModelType = {
   POSTERIOR: 'posterior',
   ANTERIOR: 'anterior',
 } as const;
 
-type ModelType = typeof ModelType[keyof typeof ModelType];
+type ModelType = (typeof ModelType)[keyof typeof ModelType];
 
 export interface IExerciseData {
   name: string;
@@ -58,4 +64,8 @@ export interface IModelProps {
   style?: CSSProperties;
   svgStyle?: CSSProperties;
   type?: ModelType;
+  // Propriedades para controlar visibilidade das partes extras
+  showHands?: boolean;
+  showFeet?: boolean;
+  showEars?: boolean;
 }

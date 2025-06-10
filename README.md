@@ -1,6 +1,7 @@
 # [react-body-highlighter](https://www.npmjs.com/package/react-body-highlighter)
 
 [![CI](https://github.com/GV79/react-body-highlighter/actions/workflows/main.yml/badge.svg)](https://github.com/GV79/react-body-highlighter/actions/workflows/main.yml)
+[![Deploy](https://github.com/GV79/react-body-highlighter/actions/workflows/deploy.yml/badge.svg)](https://github.com/GV79/react-body-highlighter/actions/workflows/deploy.yml)
 [![Npm Version][npm-version-image]][npm-version-url]
 [![License][license-image]][license-url]
 [![Downloads][downloads-image]][downloads-url]
@@ -10,6 +11,19 @@ This package was created to have a body highlighter component compatible with Re
 <p align="center">
   <img width="260" src="https://raw.githubusercontent.com/GV79/react-body-highlighter/master/image/anterior-example.png" alt="React Body Highlighter">
 </p>
+
+## Demo
+
+🚀 **[Live Demo](https://gv79.github.io/react-body-highlighter/)** - Try the interactive example
+
+## Requirements
+
+This package is compatible with React 18+ and React 19. It supports:
+
+- **React 18+**: Full compatibility with concurrent features, Suspense, and new APIs
+- **React 19**: Ready for the latest React features and improvements  
+- **TypeScript**: Built with TypeScript for excellent developer experience
+- **Modern bundlers**: Works with Vite, Webpack, Rollup, and others
 
 ## Installation
 
@@ -110,6 +124,45 @@ The main SVG element has a class name `.rbh` which will allow you to manually ch
 For example, you can add something like `.rhb polygon:hover { fill: #757782 !important; }` to your `.css` file to change the muscle color on mouse hover.
 
 Otherwise, feel free to fork the repo and make any adjustments to your liking!
+
+## Development
+
+### Local Development
+
+```sh
+# Install dependencies
+pnpm install
+
+# Start the example in development mode
+pnpm dev
+
+# Build the library
+pnpm build
+
+# Run tests
+pnpm test
+```
+
+### GitHub Pages Deployment
+
+This project automatically deploys the example to GitHub Pages when changes are pushed to the main branch. The deployment workflow:
+
+1. **Builds the library** - Compiles the TypeScript source to dist/
+2. **Builds the example** - Creates a production build of the demo app
+3. **Deploys to GitHub Pages** - Publishes the demo to `https://[username].github.io/react-body-highlighter/`
+
+To set up GitHub Pages for your fork:
+
+1. Go to your repository settings
+2. Navigate to Pages section
+3. Select "GitHub Actions" as the source
+4. The workflow will automatically deploy on pushes to main
+
+The demo showcases:
+- Interactive muscle highlighting
+- Individual muscle selection (hands, feet, ears)
+- Toggle visibility of body parts
+- Selected muscles list with removal functionality
 
 [license-image]: http://img.shields.io/npm/l/react-body-highlighter.svg
 [license-url]: LICENSE

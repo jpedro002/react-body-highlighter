@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Development files
+.env*
+.vscode/
+.idea/
+*.log
+*.tgz
+
+# Testing
+test/
+coverage/
+.nyc_output/
+
+# Build tools
+tsconfig.json
+tsup.config.ts
+tsup.config.js
+vitest.config.ts
+biome.json
+lefthook.yml
+
+# CI/CD
+.github/
+
+# Documentation and examples
+docs/
+example/
+image/
+README.md
+
+# Misc
+.DS_Store
+Thumbs.db
